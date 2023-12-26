@@ -104,6 +104,11 @@ export async function compileSite(isProd = false) {
             [`package-style.${CSS_LANG}`]: genPackageStyle() || '',
           }),
         ],
+        experiments: {
+          rspackFuture: {
+            newTreeshaking: true,
+          },
+        },
       },
     },
   };
