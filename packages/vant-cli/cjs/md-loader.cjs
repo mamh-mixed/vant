@@ -54,15 +54,12 @@ const markdownToJs = (raw) => {
   html = markdownCardWrapper(html);
 
   return `
-  import { openBlock, createElementBlock } from 'vue';
+import { openBlock, createElementBlock } from 'vue';
 
 const _hoisted_1 = ['innerHTML'];
 const html = ${JSON.stringify(html)};
 
 export default {
-  setup() {
-    return { html: '' };
-  },
   render() {
     return (
       openBlock(),
